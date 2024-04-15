@@ -1,0 +1,49 @@
+.nav-bar__container {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  border: 3px solid black;
+  width: 100%;
+  padding: 10px;
+}
+
+.nav-brand {
+  width: 25%;
+}
+
+.nav-bar__container .nav-brand img {
+  height: 50px;
+  width: auto;
+}
+
+.menu-items {
+  width: 50%;
+}
+
+.menu-items > ul {
+  display: flex;
+  list-style: none;
+}
+
+.menu-items > ul > li {
+  margin-right: 5%;
+}
+
+.menu-items > ul > li > a {
+  padding: 10px;
+  text-decoration: none;
+}
+
+.social-media {
+  width: 25%;
+}
+
+.social-media > ul {
+  display: flex;
+  list-style: none;
+}
+
+.social-media > ul > li > a {
+  padding: 10px;
+  text-decoration: none;
+}

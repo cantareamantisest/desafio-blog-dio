@@ -1,0 +1,54 @@
+<br />
+<hr />
+<br />
+<div class="title">
+  <h1>{{ titleBlog }}</h1>
+</div>
+<br />
+<hr />
+
+<section class="section-main">
+  <div *ngIf="bigCard$ | async as bigCard" class="featured-article">
+    <app-big-card
+      *ngFor="let card of bigCard"
+      [imageCover]="card.postImage.download_url"
+      [title]="card.title"
+      [description]="card.body"
+      [imageAuthor]="card.postUser.image"
+      [authorName]="card.postUser.fullName"
+      [datePost]="card.postUser.birthDate"
+    >
+    </app-big-card>
+  </div>
+
+  <div class="top-articles">
+    <div *ngIf="smallCard$ | async as smallCard">
+      <app-small-card
+        *ngFor="let card of smallCard"
+        [imageCover]="card.postImage.download_url"
+        [title]="card.title"
+        [imageAuthor]="card.postUser.image"
+        [authorName]="card.postUser.fullName"
+        [datePost]="card.postUser.birthDate"
+      >
+      </app-small-card>
+    </div>
+  </div>
+</section>
+
+<hr />
+
+<section class="section-recent">
+  <div *ngIf="mediumCard$ | async as mediumCard" class="recent-articles">
+    <app-medium-card
+      *ngFor="let card of mediumCard"
+      [imageCover]="card.postImage.download_url"
+      [title]="card.title"
+      [description]="card.body"
+      [imageAuthor]="card.postUser.image"
+      [authorName]="card.postUser.fullName"
+      [datePost]="card.postUser.birthDate"
+    >
+    </app-medium-card>
+  </div>
+</section>

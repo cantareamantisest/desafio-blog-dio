@@ -1,0 +1,39 @@
+.small-card__container {
+  border: solid black 4px;
+  margin: 20px 20px 20px 20px;
+  display: flex;
+  width: 40vw;
+}
+
+.small-card__photo {
+  width: 33%;
+  height: 100%;
+}
+
+.small-card__photo img {
+  width: 100%;
+  height: auto;
+}
+
+.small-card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 20px;
+}
+
+.small-card__info {
+  display: flex;
+}
+
+.small-card__info img {
+  height: fit-content;
+  width: 1rem;
+  border-radius: 50%;
+  border: slateblue solid 1px;
+}
+
+.small-card__info p {
+  margin-left: 10px;
+}
